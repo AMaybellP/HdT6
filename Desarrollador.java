@@ -1,5 +1,4 @@
-
-public class Desarrollador {
+public class Desarrollador implements Comparable<Desarrollador>{
 	
 	/*atributos*/
 	private String nombre;
@@ -33,6 +32,13 @@ public class Desarrollador {
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
+
+	@Override
+	public int compareTo(Desarrollador o) {
+		// TODO Auto-generated method stub
+		return Integer.compare(this.getCodigo(), o.getCodigo());
+	}
+
 
 	
 }

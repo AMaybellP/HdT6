@@ -5,8 +5,10 @@ public class main {
 	public static void main (String[]args)
 	{
 	
-	Factory factory= new Factory();
-	Set<Desarrollador> Lista= factory.CrearObjeto();
+	/*Factory factory= new Factory();
+	Set<Desarrollador> Lista= factory.CrearObjeto();*/
+		
+	Metodos metodos= new Metodos();
 	
 	Scanner scan= new Scanner(System.in);
 	int opcion=0;
@@ -23,16 +25,11 @@ public class main {
 			switch(opcion)
 			{
 			case 1:
-				System.out.println("Ingrese datos del desarrollador:");
-				System.out.println("Nombre: ");
-				String n= scan.nextLine();
-				System.out.println("Codigo: ");
-				int c= scan.nextInt();
-				Desarrollador des= new Desarrollador(n,c);
-				Lista.add(des);
+				metodos.agregarDesarrollador();
 				break;
 			case 2:
-				estadisticas();
+				metodos.agregarTodos();
+				metodos.estadisticas();
 				break;
 			case 3:
 				System.out.println("Gracias por usar el programa!");
@@ -47,16 +44,6 @@ public class main {
 			scan.nextLine();
 		}
 		}
-	}
-	
-	public void agregarDesarrollador()
-	{
-		
-	}
-	public String estadisticas()
-	{
-		String estadisticas= "";
-		return estadisticas;
 	}
 
 }
