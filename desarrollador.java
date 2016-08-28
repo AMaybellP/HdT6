@@ -1,4 +1,9 @@
-
+/**
+*Desarrollador; clase que define a los desarrolladores/programadores
+*@version: 1.0
+*@author: Steven Rubio, 15044 // Andrea Pena 15127
+*@since 2016-08-28
+*/
 public class desarrollador {
 
 	/**
