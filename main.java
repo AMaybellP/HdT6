@@ -34,7 +34,10 @@ public class main {
 				metodos.agregarDesarrollador();
 				break;
 			case 2:
+				/*Llamamos al primer método de estadisticas para responder las primer 5 preguntas*/
 				System.out.println(metodos.estadisticas());
+				/*Llamamos al segundo método de estadisticas para responder las últimas 2 preguntas*/
+				metodos.estadisticas2();
 				break;
 			case 3:
 				System.out.println("Gracias por usar el programa!");
