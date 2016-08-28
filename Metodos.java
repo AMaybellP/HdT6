@@ -225,7 +225,7 @@ public class Metodos
 		}
 		
 		/*Si la cantidad de desarrolladores Java y Web es igual*/
-		if (j==w){
+		if (j==w && j>c){
 			System.out.println("Desarrolladores JAVA y Web");
 			/*Ingresamos los nombres de los desarrolladores en java y web a un vector para ordenarlos*/
 			Vector<String> nombresJW = new Vector<String>();
@@ -247,7 +247,7 @@ public class Metodos
 			
 		}
 		/*Si la cantidad de desarrolladores Java y en celulares es igual*/
-		if (j==c){
+		if (j==c && j>w){
 			System.out.println("Desarrolladores JAVA y en Celulares");
 			/*Ingresamos los nombres de los desarrolladores en java y celulares a un vector para ordenarlos*/
 			Vector<String> nombresJC = new Vector<String>();
@@ -269,7 +269,7 @@ public class Metodos
 			
 		}
 		/*Si la cantidad de desarrolladores en celulares y Web es igual*/
-		if (c==w){
+		if (c==w && c>j){
 			System.out.println("Desarrolladores de Celular y Web");
 			/*Ingresamos los nombres de los desarrolladores en celular y web a un vector para ordenarlos*/
 			Vector<String> nombresCW = new Vector<String>();
@@ -291,7 +291,7 @@ public class Metodos
 			
 		}
 		/*Si la cantidad de desarrolladores Java, Web y celulares es igual*/
-		if (j==w && j==c){
+		if (j==w && j==c && c==w){
 			System.out.println("Desarrolladores de Java,Celular y Web");
 			/*Ingresamos los nombres de los desarrolladores en JAVA, celular y web a un vector para ordenarlos*/
 			Vector<String> nombresJCW = new Vector<String>();
