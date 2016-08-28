@@ -50,7 +50,7 @@ public class Metodos
 	
 	public String estadisticas()
 	{
-		String e= "";
+		String e= "ESTADISTICAS \n";
 		e=e+"Los desarrolladores con experiencia en Java, Web y Celulares son: \n";
 		Iterator<Desarrollador> it= Lista.iterator();
 		for (int i=0; i<Lista.size(); i++)
@@ -91,7 +91,78 @@ public class Metodos
 				e=e+sig.toString()+"\n";
 			}
 		}
+		Iterator<Desarrollador> it4= Lista.iterator();
+		int Java=0;
+		int WebJ=0;
+		for (int i=0; i<Lista.size(); i++)
+		{
+			Desarrollador sig= it4.next();
+			if(sig.getCodigo()==1)
+			{
+				Java=Java+1;
+			}
+			if(sig.getCodigo()==4)
+			{
+				WebJ=WebJ+1;
+			}
+		}
+		if (Java==0 && WebJ>0)
+		{
+			e=e+"El conjunto de desarrolladores Java ES SUBCONJUNTO de desarrolladores Web. \n";
+		}
+		else
+		{
+			e=e+"El conjunto de desarrolladores Java NO es subconjunto de desarrolladores Web. \n";
+		}
 		return e; 
+	}
+	
+	public String estadisticas2()
+	{
+		String e="\nEl conjunto con mayor cantidad de desarrolladores es: \n";
+		int j=0;
+		Iterator<Desarrollador> it= Lista.iterator();
+		for(int i=0; i<Lista.size(); i++)
+		{
+			Desarrollador sig= it.next();
+			if(sig.getCodigo()==1||sig.getCodigo()==4||sig.getCodigo()==5||sig.getCodigo()==7)
+			{
+				j=j+1;
+			}
+		}
+		int w=0;
+		Iterator<Desarrollador> it2= Lista.iterator();
+		for(int i=0; i<Lista.size(); i++)
+		{
+			Desarrollador sig= it2.next();
+			if(sig.getCodigo()==2||sig.getCodigo()==4||sig.getCodigo()==6||sig.getCodigo()==7)
+			{
+				w=w+1;
+			}
+		}
+		int c=0;
+		Iterator<Desarrollador> it3= Lista.iterator();
+		for(int i=0; i<Lista.size(); i++)
+		{
+			Desarrollador sig= it3.next();
+			if(sig.getCodigo()==2||sig.getCodigo()==4||sig.getCodigo()==6||sig.getCodigo()==7)
+			{
+				c=c+1;
+			}
+		}
+		if (j>w && j>c)
+		{
+			e=e+"JAVA\n";
+		}
+		if (w>j && w>c)
+		{
+			e=e+"WEB\n";
+		}
+		if(c>j && c>w)
+		{
+			e=e+"CELULARES\n";
+		}
+		return e;
 	}
 	
 	/*@Override
