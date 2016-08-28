@@ -1,3 +1,10 @@
+
+/**
+*Desarrollador; clase que define a los desarrolladores/programadores
+*@version: 1.0
+*@author: Steven Rubio, 15044 // Andrea Pena 15127
+*@since 2016-08-28
+*/
 import java.lang.*;
 
 public class Desarrollador implements Comparable<Desarrollador>{
@@ -7,7 +14,7 @@ public class Desarrollador implements Comparable<Desarrollador>{
 	private int codigo;
 	/* 1: Java
 	 * 2: Web
-	 * 3: Móvil
+	 * 3: MÃ³vil
 	 * 4: Java y Web
 	 * 5: Java y Celulares
 	 * 6: Web y Celulares
