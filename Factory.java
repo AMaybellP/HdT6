@@ -1,9 +1,15 @@
+/**
+*Factory; clase que define y crea un objeto con la implementaci√≥n a usar
+*@version: 1.0
+*@author: Steven Rubio, 15044 // Andrea Pena 15127
+*@since 2016-08-28
+*/
 import java.util.*;
 
 public class Factory {
 	
 	/**
- 	 * Este metodo crea un objeto tipo Stack (para utilizaciÛn diseÒo Factory)
+ 	 * Este metodo crea un objeto tipo Stack (para utilizaci√≥n dise√±o Factory)
  	 * @param ninguno
  	 * @return objeto tipo Stack
  	 */
