@@ -1,3 +1,9 @@
+/**
+*Main; clase main
+*@version: 2.0
+*@author: Steven Rubio, 15044 // Andrea Pena 15127
+*@since 2016-08-28
+*/
 import java.util.*;
 
 public class main {
@@ -15,9 +21,9 @@ public class main {
 	int val=0;
 	while (val<=3)
 	{
-		System.out.println("Seleccione la acción que desea realizar:");
+		System.out.println("Seleccione la acciÃ³n que desea realizar:");
 		System.out.println("1. Agregar desarrollador");
-		System.out.println("2. Mostrar estadísticas");
+		System.out.println("2. Mostrar estadÃ­sticas");
 		System.out.println("3. Salir");
 		//try
 		{
