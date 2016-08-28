@@ -28,7 +28,7 @@ public class Metodos
 		Lista = lista;
 	}
 
-	/*MÉTODOS*/
+	/*MÃ‰TODOS*/
 	public void agregarDesarrollador()
 	{
 		Scanner scan= new Scanner(System.in);
@@ -39,7 +39,7 @@ public class Metodos
 		int c= scan.nextInt();
 		while (c<0 || c>7)
 		{
-			System.out.println("Código no válido, debe ser un número entre 1 y 7");
+			System.out.println("CÃ³digo no vÃ¡lido, debe ser un nÃºmero entre 1 y 7");
 			System.out.println("Codigo: ");
 			c= scan.nextInt();
 		}
@@ -117,9 +117,10 @@ public class Metodos
 		return e; 
 	}
 	
-	public String estadisticas2()
+	public void estadisticas2()
 	{
-		String e="\nEl conjunto con mayor cantidad de desarrolladores es: \n";
+		System.out.println("\nEl conjunto con mayor cantidad de desarrolladores es: ");
+		/*Cantidad de desarrolladores Java*/
 		int j=0;
 		Iterator<Desarrollador> it= Lista.iterator();
 		for(int i=0; i<Lista.size(); i++)
@@ -130,6 +131,7 @@ public class Metodos
 				j=j+1;
 			}
 		}
+		/*Cantidad de desarrolladores Web*/
 		int w=0;
 		Iterator<Desarrollador> it2= Lista.iterator();
 		for(int i=0; i<Lista.size(); i++)
@@ -140,6 +142,7 @@ public class Metodos
 				w=w+1;
 			}
 		}
+		/*Cantidad de desarrolladores Celulares*/
 		int c=0;
 		Iterator<Desarrollador> it3= Lista.iterator();
 		for(int i=0; i<Lista.size(); i++)
@@ -150,19 +153,77 @@ public class Metodos
 				c=c+1;
 			}
 		}
+		/*Si la cantidad de desarrolladores Java es mayor*/
 		if (j>w && j>c)
 		{
-			e=e+"JAVA\n";
+			System.out.println("Desarrolladores JAVA");
+			/*Ingresamos los nombres de los desarrolladores en java a un vector para ordenarlos*/
+			Vector<String> nombresJ = new Vector<String>();
+			Iterator<Desarrollador> itJ= Lista.iterator();
+			for(int i=0; i<Lista.size(); i++)
+			{
+				Desarrollador sig= itJ.next();
+				if(sig.getCodigo()==1||sig.getCodigo()==4||sig.getCodigo()==5||sig.getCodigo()==7)
+				{
+					/*Ingresamos todos los nombres al vector*/
+					nombresJ.add(sig.getNombre());
+					}
+				}
+			/*Lo ordenamos e imprimimos*/
+			Collections.sort(nombresJ);
+			for(String unElemento: nombresJ){
+				System.out.println(unElemento);
+			}
+			
 		}
+		/*Si la cantidad de desarrolladores Web es mayor*/
 		if (w>j && w>c)
 		{
-			e=e+"WEB\n";
+			System.out.println("WEB ");
+			/*Ingresamos los nombres de los desarrolladores Web a un vector para ordenarlos*/
+			Vector<String> nombresW = new Vector<String>();
+			Iterator<Desarrollador> itW= Lista.iterator();
+			for(int i=0; i<Lista.size(); i++)
+			{
+				Desarrollador sig= itW.next();
+				if(sig.getCodigo()==1||sig.getCodigo()==4||sig.getCodigo()==5||sig.getCodigo()==7)
+				{
+					/*Ingresamos todos los nombres al vector*/
+					nombresW.add(sig.getNombre());
+					}
+				}
+			/*Lo ordenamos e imprimimos*/
+			Collections.sort(nombresW);
+			for(String unElemento: nombresW){
+				System.out.println(unElemento);
+			}
+			
 		}
+		/*Si la cantidad de desarrolladores para Celulares es mayor*/
 		if(c>j && c>w)
 		{
-			e=e+"CELULARES\n";
+			System.out.println("CELULARES");
+			/*Ingresamos los nombres de los desarrolladores en java a un vector para ordenarlos*/
+			Vector<String> nombresC = new Vector<String>();
+			Iterator<Desarrollador> itC= Lista.iterator();
+			for(int i=0; i<Lista.size(); i++)
+			{
+				Desarrollador sig= itC.next();
+				if(sig.getCodigo()==1||sig.getCodigo()==4||sig.getCodigo()==5||sig.getCodigo()==7)
+				{
+					/*Ingresamos todos los nombres al vector*/
+					nombresC.add(sig.getNombre());
+					}
+				}
+			/*Lo ordenamos e imprimimos*/
+			Collections.sort(nombresC);
+			
+			for(String unElemento: nombresC){
+				System.out.println(unElemento);
+			}
+			
 		}
-		return e;
+		
 	}
 	
 	/*@Override
