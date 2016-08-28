@@ -4,13 +4,6 @@ public class Metodos
 {
 	Factory factory;
 	Set<Desarrollador> Lista;
-	Collection<Desarrollador> d1;
-	Collection<Desarrollador> d2;
-	Collection<Desarrollador> d3;
-	Collection<Desarrollador> d4;
-	Collection<Desarrollador> d5;
-	Collection<Desarrollador> d6;
-	Collection<Desarrollador> d7;
 	
 	public Metodos()
 	{
@@ -51,50 +44,53 @@ public class Metodos
 			c= scan.nextInt();
 		}
 		Desarrollador des= new Desarrollador(n,c);
-		if (c==1)
-		{
-			d1.add(des);
-		}
-		if (c==2)
-		{
-			d2.add(des);
-		}
-		if (c==3)
-		{
-			d3.add(des);
-		}
-		if (c==4)
-		{
-			d4.add(des);
-		}
-		if (c==5)
-		{
-			d5.add(des);
-		}
-		if (c==6)
-		{
-			d6.add(des);
-		}
-		if (c==7)
-		{
-			d7.add(des);
-		}
-	}
-	
-	public void agregarTodos()
-	{
-		Lista.addAll(d1);
-		Lista.addAll(d2);
-		Lista.addAll(d3);
-		Lista.addAll(d4);
-		Lista.addAll(d5);
-		Lista.addAll(d6);
-		Lista.addAll(d7);
+		System.out.println(des.toString());
+		Lista.add(des);
 	}
 	
 	public String estadisticas()
 	{
 		String e= "";
+		e=e+"Los desarrolladores con experiencia en Java, Web y Celulares son: \n";
+		Iterator<Desarrollador> it= Lista.iterator();
+		for (int i=0; i<Lista.size(); i++)
+		{
+			Desarrollador sig= it.next();
+			if(sig.getCodigo()==7)
+			{
+				e=e+sig.toString()+"\n";
+			}
+		}
+		Iterator<Desarrollador> it1= Lista.iterator();
+		e=e+"Los desarrolladores con experiencia en Java que no tienen experiencia en Web son: \n";
+		for (int i=0; i<Lista.size(); i++)
+		{
+			Desarrollador sig= it1.next();
+			if(sig.getCodigo()==1||sig.getCodigo()==5)
+			{
+				e=e+sig.toString()+"\n";
+			}
+		}
+		Iterator<Desarrollador> it2= Lista.iterator();
+		e=e+"Los desarrolladores con experiencia en Web y Celulares, pero no en Java son: \n";
+		for (int i=0; i<Lista.size(); i++)
+		{
+			Desarrollador sig= it2.next();
+			if(sig.getCodigo()==6)
+			{
+				e=e+sig.toString()+"\n";
+			}
+		}
+		Iterator<Desarrollador> it3= Lista.iterator();
+		e=e+"Los desarrolladores con experiencia en Web o Celulares, pero no en Java son: \n";
+		for (int i=0; i<Lista.size(); i++)
+		{
+			Desarrollador sig= it3.next();
+			if(sig.getCodigo()==6||sig.getCodigo()==2||sig.getCodigo()==3)
+			{
+				e=e+sig.toString()+"\n";
+			}
+		}
 		return e; 
 	}
 	

@@ -19,7 +19,7 @@ public class main {
 		System.out.println("1. Agregar desarrollador");
 		System.out.println("2. Mostrar estadísticas");
 		System.out.println("3. Salir");
-		try
+		//try
 		{
 			opcion= scan.nextInt();
 			switch(opcion)
@@ -28,8 +28,7 @@ public class main {
 				metodos.agregarDesarrollador();
 				break;
 			case 2:
-				metodos.agregarTodos();
-				metodos.estadisticas();
+				System.out.println(metodos.estadisticas());
 				break;
 			case 3:
 				System.out.println("Gracias por usar el programa!");
@@ -37,12 +36,12 @@ public class main {
 				break;
 			}
 		}
-		catch(Exception e)
+		/*catch(Exception e)
 		{
 			System.out.println("Seleccione una opcion correcta");
 			System.out.println("");
 			scan.nextLine();
-		}
+		}*/
 		}
 	}
 
