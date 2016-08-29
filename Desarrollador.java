@@ -14,7 +14,7 @@ public class Desarrollador implements Comparable<Desarrollador>{
 	private int codigo;
 	/* 1: Java
 	 * 2: Web
-	 * 3: Móvil
+	 * 3: Movil
 	 * 4: Java y Web
 	 * 5: Java y Celulares
 	 * 6: Web y Celulares
@@ -49,7 +49,7 @@ public class Desarrollador implements Comparable<Desarrollador>{
 	
 	public String toString()
 	{
-		String s= "Nombre: " + nombre + "\nDesarrollador: ";
+		String s= "Nombre: " + nombre + "\t\t\tDesarrollador: ";
 		if (codigo==1)
 			s=s+"Java";
 		if (codigo==2)
