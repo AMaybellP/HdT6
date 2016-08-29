@@ -148,7 +148,7 @@ public class Metodos
 		for(int i=0; i<Lista.size(); i++)
 		{
 			Desarrollador sig= it3.next();
-			if(sig.getCodigo()==2||sig.getCodigo()==4||sig.getCodigo()==6||sig.getCodigo()==7)
+			if(sig.getCodigo()==3||sig.getCodigo()==4||sig.getCodigo()==5||sig.getCodigo()==7)
 			{
 				c=c+1;
 			}
